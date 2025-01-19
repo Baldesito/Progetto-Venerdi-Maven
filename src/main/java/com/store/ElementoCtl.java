@@ -1,12 +1,21 @@
 package com.store;
-// Classe astratta
+
+// Classe astratta che rappresenta un elemento del catalogo
 public abstract class ElementoCtl {
     private String codiceISBN;
     private String titolo;
     private int annoPublicazione;
     private int numeroPagine;
 
-    // Costruttori, getter e setter
+    // Costruttore
+    public ElementoCtl(String codiceISBN, String titolo, int annoPublicazione, int numeroPagine) {
+        this.codiceISBN = codiceISBN;
+        this.titolo = titolo;
+        this.annoPublicazione = annoPublicazione;
+        this.numeroPagine = numeroPagine;
+    }
+
+    // Getter e setter
     public String getCodiceISBN() {
         return codiceISBN;
     }
@@ -39,7 +48,4 @@ public abstract class ElementoCtl {
         this.numeroPagine = numeroPagine;
     }
 }
-
-
-
 
